@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html lang="en" >
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Crossing Fonds - Annotorious & Node.js</title>
+   
+    <!-- <link rel="stylesheet" href="src/annotorious.min.css"> -->
+    <!-- <script src="src/annotorious.min.js"></script> -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@recogito/annotorious@2.1.6/dist/annotorious.min.css">
+
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@recogito/firebase-storage@latest/dist/recogito-firebase-storage.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@recogito/annotorious@2.1.6/dist/annotorious.min.js"></script>
+
+    <!-- <script src="script.js" type="module"></script> -->
+
+  </head>
+
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@recogito/firebase-storage@latest/dist/recogito-firebase-storage.min.js"></script>
+
+
+    <h1>Crossing Fonds - Annotorious</h1>
+
+
+    <!-- jpgs -->
+    <img class="asset" id="jpg1" src="assets/Photos/SD-01-01-0066 Box 33-09-001.jpg">
+    <!-- <img class="asset" id="image2" src="assets/Photos/SDA_IWA_030.jpg">
+    <img class="asset" id="image3" src="assets/Photos/TheWorkingImage_24.jpg">
+ -->
+    <!-- tifs -->
+
+    <embed class="asset" id="tif1" src="assets/Photos/SD Oto Slides 109-148-Political Actions (2) Box 109-001.tif" type="image/tiff"negative=yes>
+
+    <embed class="asset" id="pdf1" src="assets/Documents/Barrington, Pearl.pdf">
+
+    <!-- <embed class="asset" id="tif2" src="assets/Photos/SD Oto Slides 149-162-Miscellaneous-Box 109-008.tif" type="image/tiff"negative=yes>
+    <embed class="asset" id="tif3" src="assets/Photos/TheWorkingImage_02.tif" type="image/tiff"negative=yes>
+
+ -->
+
+    <!-- <script>
+      (function() {
+        var anno = Annotorious.init({
+          image: 'racoon'
+        });
+
+        //anno.loadAnnotations('src/annotations.w3c.json');
+      })()
+    </script> -->
+
+    <script type="module">
+
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+      // import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-analytics.js";
+      import { getFirestore } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
+
+      var firebaseConfig = {
+        apiKey: "AIzaSyAjHaIpXcCpQNHYpWuGjJ6HAz4EwlVkXKs",
+        authDomain: "cf-anno4.firebaseapp.com",
+        projectId: "cf-anno4",
+        storageBucket: "cf-anno4.appspot.com",
+        messagingSenderId: "846817611202",
+        appId: "1:846817611202:web:45c825dff766bfe12e1a5b",
+        measurementId: "G-06RBMVH78S"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      // const analytics = getAnalytics(app);
+      const db = getFirestore(app);
+
+      var selected = "jpg1";
+      // var count = 0;
+
+
+
+      // $('.asset').click(function(e){
+      //   count++;
+      //   selected = e.target.id;
+      //   console.log(selected);
+      //   //alert ("click");
+
+      // })
+
+
+
+
+      // var config = {
+      //   image: document.getElementById('image1'),
+      //   readOnly: true
+      // };
+
+      // var image = document.getElementById('image1');
+      // var image2 = document.getElementById('image2');
+
+      // Init Annotorious
+      // var anno = Annotorious.init(config);
+      // var anno = Annotorious.init({ image });
+
+      var anno = Annotorious.init({
+        image: document.getElementById(selected)
+      });
+
+      // var anno2 = Annotorious.init({
+      //   image: document.getElementById('image2')
+      // });
+
+
+      var settings = {
+        annotationTarget: document.getElementById(selected).src,  // mandatory
+        // annotationTarget: image2.src,  // mandatory
+        collectionName: 'annotations' // optional (default = 'annotations')
+      }
+
+      // var settings2 = {
+      //   annotationTarget: document.getElementById('image2').src,  // mandatory
+      //   // annotationTarget: image2.src,  // mandatory
+      //   collectionName: 'annotations' // optional (default = 'annotations')
+      // }
+
+
+      // Init the storage plugin
+      recogito.FirebaseStorage(anno, firebaseConfig, settings);
+      // recogito.FirebaseStorage(anno2, firebaseConfig, settings2);
+
+
+    </script> 
+
+    <style>
+
+      h1 {
+        width: 100%;
+        text-align: center;
+      }
+
+      .asset {
+        width:400px;
+        height: 400px;
+        margin: 20px;
+        padding: 0;
+      }
+    </style>
+
+  </body>
+
+</html>
