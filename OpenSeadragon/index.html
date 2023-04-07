@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en" >
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Crossing Fonds - OpenSeadragon</title>
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@recogito/annotorious@2.1.6/dist/annotorious.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@recogito/annotorious@2.1.6/dist/annotorious.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@900&family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+
+    <!-- <script src="script.js" type="module"></script> -->
+
+    <script src="openseadragon/openseadragon.min.js"></script>
+    <script type="annotorious-openseadragon/openseadragon-annotorious.min.js"></script>
+
+  </head>
+
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <h1>Crossing Fonds</h1>
+
+    <img id="photo" src="assets/extra/lines.png">
+    
+    <div id="openseadragon1" style="width:1200px; height:900px"></div>
+
+    <script type="text/javascript">
+        var viewer = OpenSeadragon({
+            id: "openseadragon1",
+            prefixUrl: "openseadragon/images/",
+            tileSources: ["assets/DZI/TheWorkingImage_24.dzi","assets/DZI/B4F1.dzi","assets/DZI/SD_Otoslides_1.dzi","assets/DZI/SD-01-01-0015.dzi","assets/DZI/SD-01-01-0511.dzi","assets/DZI/Box26.dzi","assets/DZI/SDA_IWA_030.dzi","assets/DZI/SD-01-01-0066.dzi","assets/DZI/SD_OtoslideS_2.dzi","assets/DZI/TWI_2.dzi","assets/DZI/BP.dzi"],
+            collectionMode:       true,
+            collectionRows:       3, 
+            collectionTileSize:   1024,
+            collectionTileMargin: 256,
+        });
+
+
+      //   window.onload = function() {
+      //   var viewer = OpenSeadragon({
+      //     id: "openseadragon1",
+      //     prefixUrl: "openseadragon/images/",
+      //     tileSources: {
+      //       type: "image",
+      //       url: "1280px-Hallstatt.jpg"
+      //     }
+      //   });
+
+      //   Initialize the Annotorious plugin
+      //   var anno = OpenSeadragon.Annotorious(viewer);
+
+      //   // Load annotations in W3C WebAnnotation format
+      //   anno.loadAnnotations('annotations.w3c.json');
+
+      //   // Attach handlers to listen to events
+      //   anno.on('createAnnotation', function(a) {
+      //     // Do something
+      //   });
+      // }
+
+      
+    </script>
+
+    <style>
+
+      body {
+        background-color:#FDF7EC;
+        padding: 0;
+        margin: 0;
+      }
+
+      h1 {
+        font-family: 'Anton', sans-serif;
+        font-size: 150px;
+        padding: 10px;
+        margin: 0;
+        letter-spacing: 30px;
+        position: relative;
+        z-index: 3;
+        line-height: 175px;
+        
+      }
+
+      #openseadragon1 {
+/*        float: right;*/
+        z-index: 1;
+        position: relative;
+/*        top: 200px;*/
+/*        right:400px;*/
+        margin: 50px;
+      }
+
+      #photo {
+        position: absolute;
+        z-index: 0;
+        width: 100%;
+      }
+    </style>
+
+  </body>
+
+</html>

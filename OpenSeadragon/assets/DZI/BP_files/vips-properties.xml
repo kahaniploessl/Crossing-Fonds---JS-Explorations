@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<image xmlns="http://www.vips.ecs.soton.ac.uk//dzsave" date="2023-03-01T20:17:52.772608-05" version="8.14.1">
+  <properties>
+    <property>
+      <name>width</name>
+      <value type="gint">612</value>
+    </property>
+    <property>
+      <name>height</name>
+      <value type="gint">792</value>
+    </property>
+    <property>
+      <name>bands</name>
+      <value type="gint">4</value>
+    </property>
+    <property>
+      <name>xoffset</name>
+      <value type="gint">0</value>
+    </property>
+    <property>
+      <name>yoffset</name>
+      <value type="gint">0</value>
+    </property>
+    <property>
+      <name>xres</name>
+      <value type="gdouble">2.8346456692913389</value>
+    </property>
+    <property>
+      <name>yres</name>
+      <value type="gdouble">2.8346456692913389</value>
+    </property>
+    <property>
+      <name>vips-loader</name>
+      <value type="VipsRefString">pdfload</value>
+    </property>
+    <property>
+      <name>pdf-n_pages</name>
+      <value type="gint">29</value>
+    </property>
+    <property>
+      <name>n-pages</name>
+      <value type="gint">29</value>
+    </property>
+    <property>
+      <name>pdf-creator</name>
+      <value type="VipsRefString">RICOH MP C4503</value>
+    </property>
+    <property>
+      <name>pdf-producer</name>
+      <value type="VipsRefString">Adobe Acrobat 10.11 Paper Capture Plug-in</value>
+    </property>
+    <property>
+      <name>pdf-metadata</name>
+      <value type="VipsRefString">&lt;?xpacket begin="&#x23ef;&#x23bb;&#x23bf;" id="W5M0MpCehiHzreSzNTczkc9d"?&gt;
+&lt;x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2010/09/27-13:37:26        "&gt;
+   &lt;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"&gt;
+      &lt;rdf:Description rdf:about=""
+            xmlns:xmp="http://ns.adobe.com/xap/1.0/"&gt;
+         &lt;xmp:CreateDate&gt;2019-08-23T14:27:24-07:00&lt;/xmp:CreateDate&gt;
+         &lt;xmp:CreatorTool&gt;RICOH MP C4503&lt;/xmp:CreatorTool&gt;
+         &lt;xmp:ModifyDate&gt;2019-08-28T15:29:31-07:00&lt;/xmp:ModifyDate&gt;
+         &lt;xmp:MetadataDate&gt;2019-08-28T15:29:31-07:00&lt;/xmp:MetadataDate&gt;
+      &lt;/rdf:Description&gt;
+      &lt;rdf:Description rdf:about=""
+            xmlns:pdf="http://ns.adobe.com/pdf/1.3/"&gt;
+         &lt;pdf:Producer&gt;Adobe Acrobat 10.11 Paper Capture Plug-in&lt;/pdf:Producer&gt;
+      &lt;/rdf:Description&gt;
+      &lt;rdf:Description rdf:about=""
+            xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+         &lt;dc:format&gt;application/pdf&lt;/dc:format&gt;
+      &lt;/rdf:Description&gt;
+      &lt;rdf:Description rdf:about=""
+            xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/"&gt;
+         &lt;xmpMM:DocumentID&gt;uuid:9b683684-a787-314e-8eb8-67b88e2f0ff3&lt;/xmpMM:DocumentID&gt;
+         &lt;xmpMM:InstanceID&gt;uuid:1e8fd8ed-232a-1b4a-9a39-b32ebf8bd457&lt;/xmpMM:InstanceID&gt;
+      &lt;/rdf:Description&gt;
+   &lt;/rdf:RDF&gt;
+&lt;/x:xmpmeta&gt;
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                           
+&lt;?xpacket end="w"?&gt;</value>
+    </property>
+    <property>
+      <name>vips-sequential</name>
+      <value type="gint">1</value>
+    </property>
+  </properties>
+</image>
